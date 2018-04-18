@@ -89,21 +89,16 @@ coefficients/
 
 **NOTE:** We only include Bailly et al.'s (2013) dataset, as we have no permission to share other datasets analysed in the article.
 
-- data/bailly et al 2013.R - dataset.csv
--- Dataset of gesture elicitation study by Bailly et al. (2013) 
+data/
+- bailly et al 2013.R - dataset.csv : Dataset of gesture elicitation study by Bailly et al. (2013) 
 
-- section7.bailly et al 2013 - basic analysis.R
-Basic analysis of agreement for Bailly et al's dataset. 
+- section7.bailly et al 2013 - basic analysis.R : Basic analysis of agreement for Bailly et al's dataset. 
 
-- section7.bailly et al 2013 - specific agreement.R
-Analysis of specific agreement for Bailly et al's dataset. 
+- section7.bailly et al 2013 - specific agreement.R : Analysis of specific agreement for Bailly et al's dataset. 
 
-- section7.bailly et al 2013 - women vs men.Vb.R
-Using the Vb test for the analysis of agreement differences between women and men for Bailly et al's dataset.
+- section7.bailly et al 2013 - women vs men.Vb.R : Using the Vb test for the analysis of agreement differences between women and men for Bailly et al's dataset.
 
-- section7.bailly et al 2013 - women vs men.bootstrap.R
-Using the bootstrap method for the analysis of agreement differences between women and men for Bailly et al's dataset. It can be very slow.
-
+- section7.bailly et al 2013 - women vs men.bootstrap.R : Using the bootstrap method for the analysis of agreement differences between women and men for Bailly et al's dataset. It can be very slow.
 
 
 ## Acknowledgments
