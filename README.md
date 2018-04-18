@@ -89,8 +89,7 @@ coefficients/
 
 **NOTE:** We only include Bailly et al.'s (2013) dataset, as we have no permission to share other datasets analysed in the article.
 
-data/
-- bailly et al 2013.R - dataset.csv : Dataset of gesture elicitation study by Bailly et al. (2013) 
+- data/bailly et al 2013.R - dataset.csv : Dataset of gesture elicitation study by Bailly et al. (2013) 
 
 - section7.bailly et al 2013 - basic analysis.R : Basic analysis of agreement for Bailly et al's dataset. 
 
@@ -103,4 +102,5 @@ data/
 
 ## Acknowledgments
 Pierre Dragicevic has contributed code for the calculation of agreement indices and their confidence intervals. 
+
 See: Tsandilas, T., and Dragicevic, P. (2016). Accounting for Chance Agreement in Gesture Elicitation Studies. Research Report 1584, LRI - CNRS, University Paris-Sud, Feb 2016.
