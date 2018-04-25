@@ -6,6 +6,8 @@
 
 **email:** theophanis.tsandilas@inria.fr
 
+**project page:** https://agreement.lri.fr/ 
+
 Some of these scripts require the installation of additional R libraries. 
 You can install the following libraries to avoid any error messages:
 
