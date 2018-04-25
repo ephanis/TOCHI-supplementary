@@ -6,7 +6,7 @@ email: theophanis.tsandilas@inria.fr
 
 Supplementary material for TOCHI article: Fallacies of Agreement: A Critical Review of Consensus Assessment Methods for Gesture Elicitation
 
-Note: For updated scripts, please check the website of this project at: https://www.lri.fr/~fanis/agreement 
+Project page: https://agreement.lri.fr
 ============================================
 
 Some of these scripts require the installation of additional R libraries. 
