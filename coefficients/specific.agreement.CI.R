@@ -217,7 +217,7 @@ jackknife.specific.CI <- function(full.sample, jackknife.samples, statistic, cat
   
   cis.df <- data.frame(
     Category = categories, 
-    Mean = c(mean.estimate),
+    Specific = c(mean.estimate),
     Lower = c(lower.bound),
     Upper = c(upper.bound),
     Count = 0:0,
@@ -225,8 +225,8 @@ jackknife.specific.CI <- function(full.sample, jackknife.samples, statistic, cat
     )
 
   cis.df <- cis.df[match(target,cis.df$Category),]
-  cis.df$Count <- tab
-  cis.df$Freq <- 100 * tab / sum(tab)
+  cis.df$Count <- as.numeric(tab)
+  cis.df$Freq <- as.numeric(100 * tab / sum(tab))
   
   cis.df
 }

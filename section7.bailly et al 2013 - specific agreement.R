@@ -51,16 +51,16 @@ for(q in 1:nrow(ci.df)){
 
 ###########################################################
 ###########################################################
-referents <- ci.df$Category
+categories <- ci.df$Category
 
 library(ggplot2)
 
 x_angle <- 40
 
-plot <- ggplot(ci.df, aes(x = Category, y = Mean)) +
+plot <- ggplot(ci.df, aes(x = Category, y = Specific)) +
 geom_point(size = 1.8, color = "#0000aa", shape = 1) +
 # ylim(-0.3, 1.0) +
-scale_x_discrete(name ="Referent", limits = referents) +
+scale_x_discrete(name ="Sign", limits = categories) +
 scale_y_continuous(breaks=c(0, 0.2, 0.4, 0.6, 0.8, 1))+
 theme_bw() +
 geom_errorbar(aes(ymax = Upper, ymin = Lower), width=0.1, color = "#0000aa") +

@@ -105,9 +105,7 @@ directional <- c("top", "bottom", "left", "right", "previous", "next", "Previous
 allcmds <- data[,1]
 matched.rows <- grep(paste(directional,collapse="|"), allcmds)
 directional.ratings <- signs_gestures[matched.rows,]
-all.rows <- 1:nrow(data)
-unmatched.rows <- setdiff(all.rows, matched.rows)
-other.ratings <- signs_gestures[unmatched.rows,]
+other.ratings <- signs_gestures[-matched.rows,]
 cat("Selected", nrow(directional.ratings), "and", nrow(other.ratings), "rows.\n")
 
 analyze.diff(signs_gestures, directional.ratings, other.ratings)
