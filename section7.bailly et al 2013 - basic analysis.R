@@ -20,25 +20,14 @@ source("coefficients/agreement.coefficients.R")
 ## 1 - Load and prepare data
 
 data = read.csv("data/bailly et al 2013 - dataset.csv", stringsAsFactors=F)
-nparticipants <- (ncol(data)-1)/5
-nreferents <- nrow(data)
 
-emptyframe <- function(nrows, ncols, colprefix) {
-  as.data.frame(setNames(replicate(ncols,character(nrows), simplify = F), paste(colprefix, seq(1:ncols), sep="")))
-}
+# For each participant, there are five columns, where the first captures the key and the second captures the gesture
+signs_keys <- data[, seq(2, ncol(data), by=5)] # These are participants' proposals of keys
+signs_gestures <- data[, seq(3, ncol(data), by=5)] # These are participants' proposals of key gestures
 
-signs_keys <- emptyframe(nreferents, nparticipants, "P")
-signs_gestures <- emptyframe(nreferents, nparticipants, "P")
-
-col <- function(data, header, suffix) {data[[paste(header, suffix, sep="")]]}
-for (p in 1:nparticipants) {
-  keys <- col(data, "key", p)
-  gestures <- col(data, "gesture", p)
-  
-  signs_keys[p] <- keys
-  signs_gestures[p] <- gestures
-}
-
+# Replace the column names by the participant IDs
+names(signs_keys) <- paste0("P", 1:ncol(signs_keys))
+names(signs_gestures) <- paste0("P", 1:ncol(signs_gestures))
 
 ## 2 - Compute agreements with CIs
 

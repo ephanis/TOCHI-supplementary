@@ -11,25 +11,11 @@ source("coefficients/specific.agreement.CI.R")
 ## 1 - Load and prepare data
 
 data = read.csv("data/bailly et al 2013 - dataset.csv", stringsAsFactors=F)
-nparticipants <- (ncol(data)-1)/5
-nreferents <- nrow(data)
-
-emptyframe <- function(nrows, ncols, colprefix) {
-  as.data.frame(setNames(replicate(ncols,character(nrows), simplify = F), paste(colprefix, seq(1:ncols), sep="")))
-}
-signs <- emptyframe(nreferents, nparticipants, "P")
-
-col <- function(data, header, suffix) {data[[paste(header, suffix, sep="")]]}
-for (p in 1:nparticipants) {
-  gestures <- col(data, "gesture", p)
-  signs[p] <- gestures
-}
-
+# For each participant, there are five columns, where the first captures the key and the second captures the gesture
+signs <- data[, seq(3, ncol(data), by=5)] # These are participants' proposals of key gestures
 
 # 2 - Calculate Specific Agreement for gesture signs
-
 cat("##### ", "Sign Frequency and Agreement Specific to Individual Signs" , " #####\n\n")
-
 
 ci.df <- specific.agreement.CI(signs)
 
