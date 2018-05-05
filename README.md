@@ -2,7 +2,7 @@
 
 **author:** Theophanis Tsandilas, Inria
 
-**date:** February 2018
+**date:** May 2018
 
 **email:** theophanis.tsandilas@inria.fr
 
