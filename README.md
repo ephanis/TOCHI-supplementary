@@ -24,7 +24,7 @@ You can install the following libraries to avoid any error messages:
 ## Agreement Coefficients and Confidence Intervals 
 
 coefficients/ 
-- agreement.coefficients.R : Code for agreement coefficients (Based on implementation by Kilem Gwet)
+- agreement.coefficients.R : Code for agreement coefficients (Based on [implementation by Kilem Gwet](http://agreestat.com/r_functions.html))
 - agreement.CI.R : Code for calculating confidence intervals
 - specific.agreement.CI.R : Code for calculating specific agreement 
 
