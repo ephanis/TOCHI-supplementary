@@ -85,8 +85,7 @@ cat("\nRejections of null hypothesis for ", repetitions, " random partitions of 
 result <- replicate(repetitions, bootstrap.compare.random(signs_gestures, 9))
 
 #cat("Results: ", result, "\n")
-ci <- CI(result)
-cat("\nMean number of statistically significant differences (alpha = .05) in random partitions: ", ci[2], ", 95% CI = [", ci[3], ", ", ci[1], "]\n", sep="")
+cat("\nMean number of statistically significant differences (alpha = .05) in random partitions: ", mean(result), "\n", sep="")
 
 
 
